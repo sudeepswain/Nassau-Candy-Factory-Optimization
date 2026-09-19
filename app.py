@@ -128,9 +128,6 @@ col7.metric(
 # Recommendation distribution
 # -------------------------------------------------
 
-st.subheader("Recommendation Distribution")
-
-recommendation_counts = df["Recommendation"].value_counts()
 
 st.subheader("Recommendation Distribution")
 
