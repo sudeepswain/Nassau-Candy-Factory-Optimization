@@ -132,20 +132,11 @@ st.subheader("Recommendation Distribution")
 
 recommendation_counts = df["Recommendation"].value_counts()
 
-fig, ax = plt.subplots()
+st.subheader("Recommendation Distribution")
 
-recommendation_counts.plot(
-    kind="bar",
-    ax=ax
-)
+recommendation_counts = df["Recommendation"].value_counts()
 
-ax.set_xlabel("Recommendation")
-ax.set_ylabel("Number of Products")
-ax.set_title("Product Recommendation Distribution")
-
-plt.xticks(rotation=0)
-
-st.pyplot(fig)
+st.bar_chart(recommendation_counts)
 
 
 # -------------------------------------------------
