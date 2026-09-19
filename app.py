@@ -71,7 +71,7 @@ no_change_products = len(no_change_df)
 
 orders_covered = move_df["Orders"].sum()
 
-potential_days = move_df["Potential Total Order Days Reduced"].sum()
+potential_days = move_df["Potential Order-Days Reduced"].sum()
 
 sales = move_df["Sales"].sum()
 
