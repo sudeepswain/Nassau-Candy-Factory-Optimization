@@ -1,0 +1,35 @@
+# Raw datasets
+*.csv
+*.xlsx
+*.xls
+
+# Python files
+__pycache__/
+*.py[cod]
+
+# Jupyter / Colab checkpoints
+.ipynb_checkpoints/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Python environments
+venv/
+.venv/
+env/
+
+# IDE files
+.vscode/
+.idea/
+
+# Secrets and credentials
+.env
+*.env
+
+# Temporary exports
+*.log
