@@ -191,28 +191,20 @@ if "Potential Total Order Days Reduced" in move_df.columns:
         ascending=False
     )
 
-    fig2, ax2 = plt.subplots()
+  st.subheader("Potential Modeled Impact by Product")
 
-    ax2.bar(
-        impact_plot["Product"],
-        impact_plot["Potential Total Order Days Reduced"]
+product_impact = (
+    move_df[
+        ["Product", "Potential Order-Days Reduced"]
+    ]
+    .sort_values(
+        "Potential Order-Days Reduced",
+        ascending=False
     )
+    .set_index("Product")
+)
 
-    ax2.set_xlabel("Product")
-    ax2.set_ylabel("Potential Modeled Order-Days Reduced")
-
-    ax2.set_title(
-        "Potential Modeled Impact by Product"
-    )
-
-    plt.xticks(
-        rotation=75,
-        ha="right"
-    )
-
-    plt.tight_layout()
-
-    st.pyplot(fig2)
+st.bar_chart(product_impact)
 
 
 # -------------------------------------------------
