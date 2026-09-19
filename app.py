@@ -172,27 +172,6 @@ st.dataframe(
 
 st.subheader("Potential Modeled Impact by Product")
 
-impact_columns = [
-    "Product",
-    "Potential Total Order Days Reduced",
-    "Sales",
-    "Profit"
-]
-
-available_impact_columns = [
-    column for column in impact_columns
-    if column in move_df.columns
-]
-
-if "Potential Total Order Days Reduced" in move_df.columns:
-
-    impact_plot = move_df.sort_values(
-        "Potential Total Order Days Reduced",
-        ascending=False
-    )
-
-  st.subheader("Potential Modeled Impact by Product")
-
 product_impact = (
     move_df[
         ["Product", "Potential Order-Days Reduced"]
